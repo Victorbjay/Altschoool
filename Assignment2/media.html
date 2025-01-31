@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #031c36;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #031c36;
+        }
+        .media-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .media-row > div {
+            flex: 1 1 calc(50% - 20px); /* Adjusts to half the width of the row */
+            max-width: 380px;
+        }
+        video, audio, picture img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Showcase</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="media-row">
+                <!-- Profile Picture -->
+                <div>
+                    <h2>Profile Picture</h2>
+                    <picture>
+                        <source srcset="images/bj.jpg" media="(min-width: 1024px)">
+                        <source srcset="images/bj.jpg" media="(min-width: 768px)">
+                        <img src="images/bj.jpg" alt="Victor Emeka Okpe">
+                    </picture>
+                </div>
+                <!-- Video -->
+                <div>
+                    <h2>Video</h2>
+                    <video controls>
+                        <source src="video/bj-intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- Audio -->
+            <h2>Audio</h2>
+            <p>Listen to my voice message:</p>
+            <audio controls>
+                <source src="audio/victor-message.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Emkajnr. All rights reserved.</p>
+    </footer>
+</body>
+</html>
